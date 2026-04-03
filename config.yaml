@@ -1,0 +1,24 @@
+ollama:
+  embedding_model: mxbai-embed-large
+  reranker_model: bge-reranker-v2-m3:q4_k_m
+  llm_model: llama3.1:8b
+
+# Chroma
+chroma_db_path: data/chroma_db/
+collection_name: papers
+
+# Folders
+pdf_folder: data/raw/
+manifests_folder: data/manifests/
+logs_folder: data/logs/
+topics_dir: outputs/topics/
+
+# Chunking
+chunk_size: 900
+chunk_overlap: 150
+
+# Embedding safety limits
+max_embed_tokens: 1200
+embed_overlap_chars: 300
+min_chunk_chars: 20
+max_recursive_depth: 10
